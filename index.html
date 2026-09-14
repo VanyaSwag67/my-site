@@ -1,109 +1,281 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Личный сайт — место для идей, проектов и вдохновения.">
-    <title>Мой сайт — идеи, проекты, вдохновение</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Vanyaswag67 | Developer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="site-header">
-        <a class="logo" href="#top" aria-label="На главную">М<span>·</span>С</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="sr-only">Открыть меню</span>
-        </button>
-        <nav id="main-nav" class="main-nav" aria-label="Основная навигация">
-            <a href="#about">О сайте</a>
+
+    <!-- Навигация -->
+    <nav>
+        <div class="logo">Vanyaswag67</div>
+
+        <div class="nav-links">
+            <a href="#home">Главная</a>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
             <a href="#projects">Проекты</a>
-            <a href="#contact">Контакты</a>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main id="top">
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <p class="eyebrow">Личный уголок в интернете</p>
-                <h1 id="hero-title">Создаю идеи,<br><em>которые работают.</em></h1>
-                <p class="hero-text">Добро пожаловать! Здесь я собираю свои проекты, мысли и то, что помогает превращать вдохновение в результат.</p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">Смотреть проекты <span>↗</span></a>
-                    <button class="button button-quiet" type="button" data-message>Узнать больше</button>
-                </div>
-            </div>
-            <div class="hero-art" aria-hidden="true">
-                <div class="sun"></div>
-                <div class="orbit orbit-large"></div>
-                <div class="orbit orbit-small"></div>
-                <div class="spark spark-one">✦</div>
-                <div class="spark spark-two">✦</div>
-                <div class="art-card">
-                    <span>День за днём</span>
-                    <strong>+100%</strong>
-                    <small>любопытства</small>
-                </div>
-            </div>
-        </section>
 
-        <section id="about" class="intro section-wrap">
-            <p class="section-number">01 / Обо мне</p>
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hello">ПРИВЕТ 👋</p>
+
+            <h1>
+                Я <span>Vanyaswag67</span>
+            </h1>
+
+            <h2>Начинающий программист</h2>
+
+            <p class="description">
+                Изучаю Python и веб-разработку.
+                Создаю свои первые проекты и постепенно
+                превращаю идеи в настоящий код.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="button main-button">
+                    Мои проекты
+                </a>
+
+                <a href="#about" class="button second-button">
+                    Обо мне
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+            <div class="code-window">
+
+                <div class="window-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <pre><code>print(<span>"Hello, World!"</span>)
+
+user = <span>"Vanyaswag67"</span>
+
+learning = [
+    <span>"Python"</span>,
+    <span>"HTML"</span>,
+    <span>"CSS"</span>,
+    <span>"JavaScript"</span>
+]
+
+<span># Начинаем 🚀</span></code></pre>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Обо мне -->
+    <section id="about" class="section">
+
+        <p class="section-label">01 — ОБО МНЕ</p>
+
+        <h2>Кто я?</h2>
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                💻
+            </div>
+
             <div>
-                <h2>Люблю простые решения<br><em>сложных задач.</em></h2>
-                <p>Этот сайт — небольшое пространство для экспериментов. Я верю, что хороший результат начинается с любопытства, ясной цели и готовности попробовать ещё раз.</p>
-            </div>
-        </section>
+                <h3>Vanyaswag67</h3>
 
-        <section id="projects" class="projects section-wrap" aria-labelledby="projects-title">
-            <div class="section-heading">
-                <div>
-                    <p class="section-number">02 / Избранное</p>
-                    <h2 id="projects-title">Последние<br><em>проекты</em></h2>
+                <p>
+                    Я начинающий программист, изучающий Python
+                    и веб-разработку. Мне интересно создавать
+                    программы, сайты и экспериментировать
+                    с различными технологиями.
+                </p>
+
+                <p>
+                    Этот сайт — один из моих первых проектов,
+                    опубликованных в интернете.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Навыки -->
+    <section id="skills" class="section">
+
+        <p class="section-label">02 — НАВЫКИ</p>
+
+        <h2>Что я изучаю</h2>
+
+        <div class="skills">
+
+            <div class="skill-card">
+                <div class="skill-number">01</div>
+                <h3>Python</h3>
+                <p>Изучаю программирование и создание различных программ.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-number">02</div>
+                <h3>HTML</h3>
+                <p>Создаю структуру веб-страниц.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-number">03</div>
+                <h3>CSS</h3>
+                <p>Изучаю дизайн, стили и анимации сайтов.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-number">04</div>
+                <h3>JavaScript</h3>
+                <p>Добавляю интерактивность и функциональность.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Проекты -->
+    <section id="projects" class="section">
+
+        <p class="section-label">03 — ПРОЕКТЫ</p>
+
+        <h2>Мои проекты</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <div class="project-top">
+                    <span class="project-icon">🐍</span>
+                    <span class="project-status">В разработке</span>
                 </div>
-                <p class="section-note">Несколько вещей, которыми<br>я особенно дорожу.</p>
-            </div>
-            <div class="project-grid">
-                <article class="project-card project-card-dark">
-                    <div class="project-top"><span>01</span><span>Веб-дизайн</span></div>
-                    <div class="project-icon">↗</div>
-                    <h3>Новая<br>точка зрения</h3>
-                    <a href="#contact" aria-label="Подробнее о проекте «Новая точка зрения»">Подробнее <span>↗</span></a>
-                </article>
-                <article class="project-card project-card-yellow">
-                    <div class="project-top"><span>02</span><span>Исследование</span></div>
-                    <div class="project-shape"></div>
-                    <h3>Идеи<br>в движении</h3>
-                    <a href="#contact" aria-label="Подробнее о проекте «Идеи в движении»">Подробнее <span>↗</span></a>
-                </article>
-                <article class="project-card project-card-light">
-                    <div class="project-top"><span>03</span><span>Эксперимент</span></div>
-                    <div class="project-lines">///</div>
-                    <h3>Форма<br>и функция</h3>
-                    <a href="#contact" aria-label="Подробнее о проекте «Форма и функция»">Подробнее <span>↗</span></a>
-                </article>
-            </div>
-        </section>
 
-        <section id="contact" class="contact section-wrap">
-            <p class="section-number">03 / На связи</p>
+                <h3>Python Projects</h3>
+
+                <p>
+                    Мои первые программы и эксперименты
+                    на Python.
+                </p>
+
+                <span class="project-tech">
+                    Python
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-top">
+                    <span class="project-icon">🌐</span>
+                    <span class="project-status">Этот сайт</span>
+                </div>
+
+                <h3>My Website</h3>
+
+                <p>
+                    Личный сайт Vanyaswag67,
+                    созданный с помощью HTML, CSS и JavaScript.
+                </p>
+
+                <span class="project-tech">
+                    HTML • CSS • JS
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-top">
+                    <span class="project-icon">🚀</span>
+                    <span class="project-status">Скоро</span>
+                </div>
+
+                <h3>Новый проект</h3>
+
+                <p>
+                    Здесь скоро появится мой следующий
+                    проект.
+                </p>
+
+                <span class="project-tech">
+                    Coming soon
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Контакты -->
+    <section class="contact">
+
+        <p class="section-label">04 — КОНТАКТЫ</p>
+
+        <h2>Связаться со мной</h2>
+
+        <p>
+            Если хочешь связаться со мной,
+            можешь найти меня в Discord.
+        </p>
+
+        <div class="discord">
+            <span class="discord-icon">💬</span>
+
             <div>
-                <h2>Есть идея?<br><em>Давайте обсудим.</em></h2>
-                <a class="contact-link" href="mailto:hello@example.com">hello@example.com <span>↗</span></a>
+                <small>DISCORD</small>
+                <strong>dydavanya</strong>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer class="site-footer">
-        <span>© <span id="year">2026</span> Мой сайт</span>
-        <span>Сделано с интересом</span>
+    </section>
+
+
+    <!-- Подвал -->
+    <footer>
+
+        <div class="footer-logo">
+            Vanyaswag67
+        </div>
+
+        <p>
+            Создано с ❤️ и кодом
+        </p>
+
+        <p class="copyright">
+            © 2026 Vanyaswag67
+        </p>
+
     </footer>
 
-    <div class="toast" role="status" aria-live="polite"></div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
+```

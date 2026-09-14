@@ -1,27 +1,40 @@
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#main-nav");
-const messageButton = document.querySelector("[data-message]");
-const toast = document.querySelector(".toast");
-const year = document.querySelector("#year");
+```javascript
+// Анимация появления элементов при прокрутке
 
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
+const cards = document.querySelectorAll(
+    ".skill-card, .project-card, .about-card"
+);
 
-menuButton?.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("is-open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+// Начальное состояние карточек
+
+cards.forEach((card) => {
+
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+    card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+
+    observer.observe(card);
+
 });
-
-navigation?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        navigation.classList.remove("is-open");
-        menuButton?.setAttribute("aria-expanded", "false");
-    });
-});
-
-messageButton?.addEventListener("click", () => {
-    toast.textContent = "Здесь появляются новые идеи. Заглядывайте чаще!";
-    toast.classList.add("is-visible");
-    window.setTimeout(() => toast.classList.remove("is-visible"), 3500);
-});
+```
